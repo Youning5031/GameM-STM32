@@ -1,0 +1,192 @@
+# 语言与基础格式 Language & Basic Formatting
+ColumnLimit: 120
+UseTab: Never
+TabWidth: 4
+IndentWidth: 4
+# BasedOnStyle: None
+Language: Cpp
+Standard: Auto
+UseCRLF: false
+DeriveLineEnding: true
+Cpp11BracedListStyle: true
+SortUsingDeclarations: true
+CompactNamespaces: false
+
+# 缩进 Indentation
+ContinuationIndentWidth: 4
+NamespaceIndentation: None
+IndentCaseLabels: false
+IndentCaseBlocks: false
+IndentAccessModifiers: false
+IndentWrappedFunctionNames: false
+IndentPPDirectives: AfterHash
+IndentExternBlock: AfterExternBlock
+IndentRequires: true
+LambdaBodyIndentation: Signature
+ConstructorInitializerIndentWidth: 2
+IndentGotoLabels: true
+PPIndentWidth: 2
+AccessModifierOffset: -4
+
+# 对齐 Alignment
+AlignConsecutiveDeclarations: None
+AlignConsecutiveAssignments: None
+AlignOperands: AlignAfterOperator
+AlignTrailingComments: true
+DerivePointerAlignment: false
+PointerAlignment: Right
+ReferenceAlignment: Pointer
+AlignAfterOpenBracket: AlwaysBreak
+AlignConsecutiveMacros: AcrossComments
+AlignConsecutiveBitFields: AcrossComments
+AlignArrayOfStructures: Left
+AlignEscapedNewlines: Left
+QualifierAlignment: Left
+# QualifierOrder: None #!
+
+# 换行与括号 Breaking & Wrapping
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterFunction: false
+  AfterClass: false
+  AfterControlStatement: false
+  AfterStruct: false
+  AfterEnum: false
+  AfterUnion: false
+  AfterNamespace: false
+  AfterCaseLabel: false
+  BeforeElse: false
+  BeforeWhile: false
+  AfterExternBlock: false
+  BeforeCatch: false
+  BeforeLambdaBody: false
+  IndentBraces: false
+  SplitEmptyFunction: false
+  SplitEmptyRecord: false
+  SplitEmptyNamespace: false
+  # ObjC
+  # AfterObjCDeclaration: None
+BreakBeforeBinaryOperators: All
+BinPackParameters: true
+AllowAllParametersOfDeclarationOnNextLine: true
+BinPackArguments: true
+AllowAllArgumentsOnNextLine: true
+PackConstructorInitializers: NextLine
+# AllowAllConstructorInitializersOnNextLine: None # 废弃 Deprecated
+# ConstructorInitializerAllOnOneLineOrOnePerLine: None # 废弃 Deprecated
+BreakConstructorInitializers: BeforeComma
+BreakInheritanceList: BeforeComma
+AlwaysBreakTemplateDeclarations: Yes
+BreakBeforeTernaryOperators: true
+BreakStringLiterals: true
+AlwaysBreakAfterReturnType: None
+AlwaysBreakAfterDefinitionReturnType: None # 废弃 Deprecated
+AlwaysBreakBeforeMultilineStrings: false
+BreakBeforeConceptDeclarations: true
+ExperimentalAutoDetectBinPacking: false
+# Java
+# BreakAfterJavaFieldAnnotations: None
+
+# 空格 Spacing
+SpaceBeforeParens: ControlStatements
+# SpaceBeforeParensOptions:
+#   AfterControlStatements: None
+#   AfterForeachMacros: None
+#   AfterFunctionDeclarationName: None
+#   AfterFunctionDefinitionName: None
+#   AfterIfMacros: None
+#   BeforeNonEmptyParentheses: None
+SpacesInParentheses: false
+SpaceBeforeSquareBrackets: false
+SpaceInEmptyBlock: false
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeCtorInitializerColon: true
+SpaceBeforeInheritanceColon: true
+SpaceBeforeCaseColon: false
+SpaceBeforeRangeBasedForLoopColon: true
+SpaceAfterCStyleCast: false
+SpaceAfterLogicalNot: false
+SpaceAfterTemplateKeyword: false
+SpaceAroundPointerQualifiers: Default
+SpaceBeforeCpp11BracedList: false
+SpaceInEmptyParentheses: false
+SpacesBeforeTrailingComments: 2
+SpacesInAngles: Never
+SpacesInCStyleCastParentheses: false
+SpacesInConditionalStatement: false
+SpacesInContainerLiterals: false
+SpacesInLineCommentPrefix:
+  Maximum: -1
+  Minimum: 1
+SpacesInSquareBrackets: false
+BitFieldColonSpacing: Both
+
+# 注释 Comments
+ReflowComments: true
+FixNamespaceComments: true
+ShortNamespaceLines: 1
+CommentPragmas: '^ Copyright \(C\)'
+
+# 行与空行 Lines & Empty Lines
+MaxEmptyLinesToKeep: 1
+KeepEmptyLinesAtTheStartOfBlocks: false
+EmptyLineBeforeAccessModifier: LogicalBlock
+EmptyLineAfterAccessModifier: Never
+
+# 宏处理 Macros
+ForEachMacros: ['list_for_each','list_for_each_s','list_for_each_prev','list_for_each_prev_s','list_for_each_entry']
+IfMacros: [] #!!
+# 无需分号的宏表达式
+StatementMacros: ['ISR_LIST']
+AttributeMacros: ['CONSTRUCTOR', 'INLINE', 'PACKED', 'SECTION', 'WEAK', 'ALIGNED','USED','patch_function']
+StatementAttributeLikeMacros: [] #!!
+TypenameMacros: [] #!!
+NamespaceMacros: []
+MacroBlockBegin: '' #!!
+MacroBlockEnd: '' #!!
+WhitespaceSensitiveMacros: ['__STR', 'STR']
+
+# 包含和导入 Include & Import
+SortIncludes: CaseInsensitive
+IncludeCategories: [] #!!
+IncludeBlocks: Regroup
+IncludeIsMainRegex: '(_test)?$'
+IncludeIsMainSourceRegex: '' #!!
+# Java
+# JavaImportGroups: None
+# SortJavaStaticImport: None
+# JavaScript
+# JavaScriptWrapImports: None
+
+# 短代码块 Short Blocks/Statements
+AllowShortIfStatementsOnASingleLine: AllIfsAndElse
+AllowShortLoopsOnASingleLine: true
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortLambdasOnASingleLine: Inline
+AllowShortEnumsOnASingleLine: true
+AllowShortCaseLabelsOnASingleLine: true
+AllowShortBlocksOnASingleLine: Empty
+
+# 惩罚项 Penalties
+PenaltyExcessCharacter: 10000
+PenaltyBreakAssignment: 120
+PenaltyBreakBeforeFirstCallParameter: 120
+PenaltyBreakComment: 10000
+PenaltyBreakString: 1000
+PenaltyBreakTemplateDeclaration: 1
+PenaltyReturnTypeOnItsOwnLine: 1
+PenaltyIndentedWhitespace: 1
+PenaltyBreakFirstLessLess: 120
+
+# 其他 Miscellaneous
+DisableFormat: false
+RawStringFormats: [] #!!
+# JavaScript
+# JavaScriptQuotes: None
+# InsertTrailingCommas: None
+# ObjC
+# ObjCBinPackProtocolList: None
+# ObjCBlockIndentWidth: None
+# ObjCBreakBeforeNestedBlockParam: None
+# ObjCSpaceAfterProperty: None
+# ObjCSpaceBeforeProtocolList: None
